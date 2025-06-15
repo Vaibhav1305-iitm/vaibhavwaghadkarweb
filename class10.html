@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 10 | SSC Subjects & Exams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #fceabb, #f8b500);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+    .section { max-width: 1200px; margin: auto; margin-bottom: 50px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .card i {
+      font-size: 36px;
+      color: #e67e22;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Class 10 Dashboard</h1>
+  <p class="subtitle">Maharashtra SSC Board: Subjects & Competitive Exams</p>
+
+  <div class="section">
+    <h2>SSC Board Subjects</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-book"></i><h3>Marathi</h3><p>Board syllabus: prose, poetry, grammar & writing.</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>Hindi</h3><p>Lesson summaries, unseen passages & essays.</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>English</h3><p>Board pattern for literature & communication.</p></div>
+      <div class="card"><i class="fas fa-calculator"></i><h3>Mathematics Part 1</h3><p>Algebra, statistics & linear equations.</p></div>
+      <div class="card"><i class="fas fa-ruler-combined"></i><h3>Mathematics Part 2</h3><p>Geometry, constructions & theorems.</p></div>
+      <div class="card"><i class="fas fa-flask"></i><h3>Science Part 1</h3><p>Physics & Chemistry concepts (with experiments).</p></div>
+      <div class="card"><i class="fas fa-dna"></i><h3>Science Part 2</h3><p>Biology: life processes, heredity & environment.</p></div>
+      <div class="card"><i class="fas fa-landmark"></i><h3>History & Political Science</h3><p>Indian freedom movement & civics topics.</p></div>
+      <div class="card"><i class="fas fa-globe-asia"></i><h3>Geography & Economics</h3><p>Maps, sectors, population, resources & GDP.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Competitive Exams & Career Kickstart</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-award"></i><h3>NTSE Stage 1</h3><p>Class 10 major exam for scholarship & talent hunt.</p></div>
+      <div class="card"><i class="fas fa-lightbulb"></i><h3>Olympiads</h3><p>Maths, Science, English, GK Olympiads (SOF/IMO).</p></div>
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>Basic Coding Tests</h3><p>Learn Python, HTML & logic building (for school level).</p></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>Mental Ability</h3><p>Important for NTSE & other logical reasoning exams.</p></div>
+      <div class="card"><i class="fas fa-certificate"></i><h3>MHT-CET Foundation</h3><p>Class 10 base for CET / JEE / NEET foundation prep.</p></div>
+      <div class="card"><i class="fas fa-users"></i><h3>Career Awareness</h3><p>Engineering, Medical, Arts & Commerce stream info.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Learning Platform | All rights reserved.</p>
+  </footer>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { app } from "./js/firebase-config.js";
+
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
+              window.location.href = "index.html";
+          }
+      });
+  </script>
+</body>
+</html>
+

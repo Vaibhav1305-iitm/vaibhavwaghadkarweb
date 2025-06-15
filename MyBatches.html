@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Batches | My Learning</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* ====== Background Style ====== */
+    body {
+      min-height: 100vh;
+      position: relative;
+      overflow: hidden;
+      padding: 30px;
+      color: #1a1a1a;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: -100px;
+      left: -100px;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 20% 30%, #a1c4fd, transparent 25%),
+                  radial-gradient(circle at 80% 50%, #c2e9fb, transparent 25%),
+                  radial-gradient(circle at 50% 80%, #fbc2eb, transparent 25%);
+      background-blend-mode: screen;
+      animation: moveBlobs 25s linear infinite;
+      z-index: -1;
+    }
+
+    @keyframes moveBlobs {
+      0% { transform: rotate(0deg) scale(1.2); }
+      50% { transform: rotate(180deg) scale(1); }
+      100% { transform: rotate(360deg) scale(1.2); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+   header h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      background: linear-gradient(90deg, #f77062, #fe5196, #45cafc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: gradientShift 6s ease infinite;
+    }
+
+    .batch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    a.batch-card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+      padding: 30px 20px;
+      text-align: center;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    a.batch-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .batch-card i {
+      font-size: 48px;
+      color: #3b82f6;
+      margin-bottom: 15px;
+    }
+
+    .batch-card h3 {
+      font-size: 1.2rem;
+      color: #222;
+    }
+
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      color: #eee;
+      font-size: 0.9rem;
+      text-shadow: 1px 1px 2px #00000030;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Batches - Choose Your Class</h1>
+  </header>
+
+  <section class="batch-grid">
+    <a href="class6.html" class="batch-card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Class 6</h3>
+    </a>
+    <a href="class7.html" class="batch-card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Class 7</h3>
+    </a>
+    <a href="class8.html" class="batch-card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Class 8</h3>
+    </a>
+    <a href="class9.html" class="batch-card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Class 9</h3>
+    </a>
+    <a href="class10.html" class="batch-card">
+      <i class="fas fa-user-graduate"></i>
+      <h3>Class 10</h3>
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Learning. All rights reserved.</p>
+  </footer>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { app } from "./js/firebase-config.js";
+
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
+              window.location.href = "index.html";
+          }
+      });
+  </script>
+</body>
+</html>
+

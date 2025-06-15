@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Vaibhav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Hello, I'm Vaibhav!</h2>
+            <p>I am passionate about helping students from Class 6 to 10 by sharing tips, notes, and learning tricks.</p>
+            <p>This website is my small effort to support students and build my skills as a future leader and website developer.</p>
+            <p>Thanks for visiting!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Vaibhav Waghadkar | All rights reserved</p>
+    </footer>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+        import { app } from "./js/firebase-config.js";
+
+        const auth = getAuth(app);
+
+        onAuthStateChanged(auth, (user) => {
+            if (!user) {
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>
+

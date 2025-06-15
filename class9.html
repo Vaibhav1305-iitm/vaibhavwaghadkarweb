@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 9 | Subjects & Exams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body {
+      background: linear-gradient(135deg, #b2fefa, #0ed2f7);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+    .section { max-width: 1200px; margin: auto; margin-bottom: 50px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .card i {
+      font-size: 36px;
+      color: #009688;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Class 9 Dashboard</h1>
+  <p class="subtitle">Maharashtra Board: Subjects & Exam Prep Guide for Class 9</p>
+
+  <div class="section">
+    <h2>Subjects (Maharashtra Board)</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-book"></i><h3>Marathi</h3><p>Grammar, essays & literature (MSBSHSE syllabus).</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>Hindi</h3><p>Prose, poetry & composition (समझ & लेखन).</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>English</h3><p>Grammar, poetry, prose, writing skills and comprehension.</p></div>
+      <div class="card"><i class="fas fa-calculator"></i><h3>Mathematics</h3><p>Algebra, Geometry, Statistics (Board-aligned).</p></div>
+      <div class="card"><i class="fas fa-flask"></i><h3>Science</h3><p>Physics, Chemistry & Biology topics per MSBSHSE.</p></div>
+      <div class="card"><i class="fas fa-landmark"></i><h3>History & Civics</h3><p>Modern Indian history + Citizen rights (Board syllabus).</p></div>
+      <div class="card"><i class="fas fa-globe"></i><h3>Geography & Environment</h3><p>Natural resources, agriculture, environment (Board syllabus).</p></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>Computer Science</h3><p>Basics of programming and digital literacy.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Competitive Exams & Prep</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-award"></i><h3>MH Board Scholarship</h3><p>Focused MBSE scholarship exam prep and sample papers.</p></div>
+      <div class="card"><i class="fas fa-lightbulb"></i><h3>Olympiads (SOF)</h3><p>Science, Mathematics & Cyber Olympiad for Class 9.</p></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>NTSE Foundation</h3><p>Stage-I prep: Mental Aptitude + Scholastic subjects.</p></div>
+      <div class="card"><i class="fas fa-certificate"></i><h3>National Level Scholarship</h3><p>Other exams like Vidyamandir, RIMC, etc.</p></div>
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>Coding & Robotics</h3><p>Pushed MCQ based and problem-solving in Python/C.</p></div>
+      <div class="card"><i class="fas fa-spell-check"></i><h3>GK & Quiz</h3><p>GK quizzes for competitions and knowledge growth.</p></div>
+      <div class="card"><i class="fas fa-pencil-alt"></i><h3>Essay/Web Articles</h3><p>Ideas for debate & essay competitions.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Learning Platform | All rights reserved.</p>
+  </footer>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { app } from "./js/firebase-config.js";
+
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
+              window.location.href = "index.html";
+          }
+      });
+  </script>
+</body>
+</html>
+

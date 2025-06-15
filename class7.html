@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class 7 | Subjects & Exams</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #e0c3fc, #8ec5fc);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    p.subtitle {
+      text-align: center;
+      font-size: 1.1rem;
+      margin-bottom: 40px;
+      color: #555;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 50px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+
+    .card i {
+      font-size: 36px;
+      color: #9b59b6;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Class 7 Dashboard</h1>
+  <p class="subtitle">Explore all subjects and competitive exam prep guides for Class 7 students</p>
+
+  <div class="section">
+    <h2>Subjects</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-book"></i><h3>Marathi</h3><p>Advanced grammar, essays and writing practice.</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>Hindi</h3><p>Prose, poetry and language skills improvement.</p></div>
+      <div class="card"><i class="fas fa-book"></i><h3>English</h3><p>Literature, grammar and reading comprehension.</p></div>
+      <div class="card"><i class="fas fa-calculator"></i><h3>Mathematics</h3><p>Fractions, decimals, algebra and more.</p></div>
+      <div class="card"><i class="fas fa-flask"></i><h3>Science</h3><p>Physics, chemistry & biology basics explained.</p></div>
+      <div class="card"><i class="fas fa-landmark"></i><h3>History & Civics</h3><p>Indian history & civic responsibilities.</p></div>
+      <div class="card"><i class="fas fa-globe"></i><h3>Geography</h3><p>Maps, regions and physical features.</p></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>Mental Ability</h3><p>Logical reasoning and pattern solving.</p></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Competitive Exams</h2>
+    <div class="grid">
+      <div class="card"><i class="fas fa-atom"></i><h3>Homi Bhabha</h3><p>Build concepts for future science exams.</p></div>
+      <div class="card"><i class="fas fa-award"></i><h3>Scholarship Exam</h3><p>Continue NTSE/Scholarship awareness.</p></div>
+      <div class="card"><i class="fas fa-trophy"></i><h3>Math & Science Olympiads</h3><p>Level-up problem solving and logic.</p></div>
+      <div class="card"><i class="fas fa-spell-check"></i><h3>Spell Bee</h3><p>Spellings, phonetics and usage mastery.</p></div>
+      <div class="card"><i class="fas fa-globe"></i><h3>G.K. Quizzes</h3><p>Current affairs and static awareness.</p></div>
+      <div class="card"><i class="fas fa-brain"></i><h3>Brain Development</h3><p>Puzzles, riddles & brain training.</p></div>
+      <div class="card"><i class="fas fa-laptop-code"></i><h3>Beginner Coding</h3><p>Scratch, Blockly & intro to logic building.</p></div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 My Learning Platform | All rights reserved.</p>
+  </footer>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { app } from "./js/firebase-config.js";
+
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
+              window.location.href = "index.html";
+          }
+      });
+  </script>
+</body>
+</html>
+

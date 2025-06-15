@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">MyLearning</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="study.html">Study Material</a></li>
+        <li><a href="timetable.html">Time Table</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>My Daily Blogs & Stories</h2>
+    <p>I share something new every day for students of Class 6 to 10.</p>
+  </section>
+<!-- Blog: Sundar Pichai Story -->
+<div class="blog-post">
+  <h3>🌟 The Inspiring Journey of Sundar Pichai</h3>
+  <p><small>June 11, 2025</small></p>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Sundar_pichai.png/440px-Sundar_pichai.png" alt="Sundar Pichai" style="max-width:100%; height:auto; border-radius:8px; margin-bottom:15px;">
+
+  <p><strong>Birth & Early Life:</strong><br>
+  Sundar Pichai was born on <strong>June 10, 1972</strong>, in <strong>Madurai, Tamil Nadu, India</strong>. His full name is <em>Pichai Sundararajan</em>. He grew up in a modest two-room apartment with his parents and younger brother. His father was an electrical engineer and his mother was a stenographer.</p>
+
+  <p><strong>Education:</strong><br>
+  Sundar Pichai completed his schooling from Jawahar Vidyalaya, Ashok Nagar, Chennai. He then did his B.Tech in Metallurgical Engineering from the <strong>Indian Institute of Technology (IIT) Kharagpur</strong>. Later, he went to the <strong>United States</strong> for higher studies. He earned an M.S. in Material Sciences and Engineering from <strong>Stanford University</strong> and an MBA from the <strong>Wharton School of the University of Pennsylvania</strong>.</p>
+
+  <p><strong>Career Start:</strong><br>
+  Sundar worked at <strong>McKinsey & Company</strong> and other tech firms before joining Google in 2004. He initially worked on the Google Toolbar, and later played a key role in the development of <strong>Google Chrome</strong>.</p>
+
+  <p><strong>Rise at Google:</strong><br>
+  Thanks to his leadership and sharp vision, Chrome became the most popular web browser in the world. He rose quickly in Google’s ranks and was appointed as the <strong>CEO of Google</strong> in <strong>2015</strong>. In 2019, he also became the <strong>CEO of Alphabet Inc.</strong>, Google’s parent company.</p>
+
+  <p><strong>Inspiration for Students:</strong><br>
+  Sundar’s journey from a small house in Chennai to the top of the tech world teaches us that <em>dreams can come true with hard work, focus, and humility</em>. He believes in simplicity, innovation, and empowering the youth with technology.</p>
+
+  <p><strong>Interesting Facts:</strong>
+    <ul>
+      <li>He didn’t own a computer until he went to the U.S.</li>
+      <li>He is known for his calm and polite nature.</li>
+      <li>He loves reading and playing cricket.</li>
+    </ul>
+  </p>
+
+  <p><strong>Message:</strong><br>
+  "Be ambitious, take risks, and believe in your ideas." — <em>Sundar Pichai</em></p>
+</div>
+
+  <section class="blog-container">
+    <!-- Blog 1 -->
+    <div class="blog-post">
+      <h3>📘 How I Started Learning HTML</h3>
+      <p><small>June 11, 2025</small></p>
+      <p>Aaj maine apni pehli website banayi. Mujhe HTML aur CSS bohot mazedaar lag raha hai...</p>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="blog-post">
+      <h3>🧠 Class 6 Science: Plant Kingdom</h3>
+      <p><small>June 10, 2025</small></p>
+      <p>Aaj humne padha ki kaise plants grow karte hain. Roots, stem, leaf ka kaam kya hota hai...</p>
+    </div>
+
+    <!-- Add more blogs below manually -->
+  </section>
+
+  <footer>
+    <p>© 2025 MyLearning Blog. All rights reserved.</p>
+  </footer>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module">
+      import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-auth.js";
+      import { app } from "./js/firebase-config.js";
+
+      const auth = getAuth(app);
+
+      onAuthStateChanged(auth, (user) => {
+          if (!user) {
+              window.location.href = "index.html";
+          }
+      });
+  </script>
+</body>
+</html>
+
+

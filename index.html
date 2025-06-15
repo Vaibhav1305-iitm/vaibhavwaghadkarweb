@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyLearning - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Background -->
+    <div class="background-container">
+        <div class="gradient-bg"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <i class="fas fa-graduation-cap"></i>
+            <span>MyLearning</span>
+        </div>
+        <button id="loginBtn" class="login-btn">
+            <span>Login</span>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1>Welcome to MyLearning</h1>
+                <p>Your journey to academic excellence starts here</p>
+            </div>
+        </section>
+
+        <!-- Class Cards Section -->
+        <section class="class-cards-section">
+            <div class="cards-container" data-aos="fade-up" data-aos-duration="1200">
+                
+                <div class="class-card card-purple" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Class 6</h3>
+                    <p>Foundational lessons & Olympiad prep.</p>
+                </div>
+
+                <div class="class-card card-blue" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Class 7</h3>
+                    <p>Concept building with problem-solving</p>
+                </div>
+
+                <div class="class-card card-cyan" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-microscope"></i>
+                    </div>
+                    <h3>Class 8</h3>
+                    <p>Interactive science, math & coding</p>
+                </div>
+
+                <div class="class-card card-red" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <h3>Class 9</h3>
+                    <p>Board prep & competition readiness</p>
+                </div>
+
+                <div class="class-card card-pink" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="card-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Class 10</h3>
+                    <p>Exam series & full-study modules</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="features-grid">
+                <div class="feature-item" data-aos="slide-right" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h4>Interactive Video Lessons</h4>
+                    <p>Engaging video content with real-time interaction</p>
+                </div>
+                
+                <div class="feature-item" data-aos="slide-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Progress Tracking</h4>
+                    <p>Monitor your learning journey with detailed analytics</p>
+                </div>
+                
+                <div class="feature-item" data-aos="slide-left" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h4>Expert Mentorship</h4>
+                    <p>Get guidance from experienced educators</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Roadmap Section -->
+        <section class="career-section" data-aos="fade-up" data-aos-duration="1000">
+            <div class="career-header">
+                <h2>Career Roadmap</h2>
+                <p>Choose your path to success</p>
+            </div>
+            
+            <div class="career-grid">
+                <div class="career-card neet-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="career-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>NEET</h3>
+                    <p>Medical entrance preparation with comprehensive Biology, Physics, and Chemistry coverage.</p>
+                    <div class="career-features">
+                        <span>Biology Focus</span>
+                        <span>Mock Tests</span>
+                        <span>Expert Faculty</span>
+                    </div>
+                </div>
+                
+                <div class="career-card jee-card" data-aos="flip-right" data-aos-delay="200">
+                    <div class="career-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>JEE</h3>
+                    <p>Engineering entrance preparation with advanced Mathematics, Physics, and Chemistry.</p>
+                    <div class="career-features">
+                        <span>Advanced Math</span>
+                        <span>Problem Solving</span>
+                        <span>IIT Faculty</span>
+                    </div>
+                </div>
+                
+                <div class="career-card upsc-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="career-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+                    <h3>UPSC</h3>
+                    <p>Civil services preparation with current affairs, history, geography, and general studies.</p>
+                    <div class="career-features">
+                        <span>Current Affairs</span>
+                        <span>Essay Writing</span>
+                        <span>Interview Prep</span>
+                    </div>
+                </div>
+                
+                <div class="career-card design-card" data-aos="flip-right" data-aos-delay="400">
+                    <div class="career-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Design</h3>
+                    <p>Creative design courses including UI/UX, Graphic Design, and Product Design.</p>
+                    <div class="career-features">
+                        <span>Creative Skills</span>
+                        <span>Portfolio Building</span>
+                        <span>Industry Projects</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Login Popup -->
+    <div class="popup-overlay" id="loginPopup">
+        <div class="popup-container">
+            <button class="close-btn" id="closePopup">&times;</button>
+            <div class="popup-header">
+                <div class="popup-logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h2 id="popupTitle">Welcome Back</h2>
+                <p id="popupSubtitle">Sign in to continue your learning journey</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Email Address" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Sign In</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+                
+                <div class="form-footer">
+                    <a href="#" class="forgot-link">Forgot Password?</a>
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign up</a></p>
+                </div>
+            </form>
+            
+            <!-- Sign Up Form -->
+            <form id="signupForm" class="auth-form" style="display: none;">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="signupName" placeholder="Full Name" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" id="signupEmail" placeholder="Email Address" required>
+                </div>
+                
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="signupPassword" placeholder="Password" required>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <span>Create Account</span>
+                    <i class="fas fa-user-plus"></i>
+                </button>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" id="loginLink">Sign in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
